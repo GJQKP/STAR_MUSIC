@@ -1,0 +1,109 @@
+{
+    "name": "Steve Music",
+    "description": "Telegram Group Calls streaming bot with some useful features.",
+    "logo": "https://iyaddz.ml/images/Davis.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "Yukki",
+    "YukkiMusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "الايدي نفس الموقع اللي فوق",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "احصل على الهاش من هنا https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": {
+        "description": "اتركها كما هي",
+        "value": "True",
+        "required": false
+      },
+      "SUPPORT_GROUP": {
+        "description": "لينك جروبك",
+        "value": "https://t.me/VVINL",
+        "required": true
+      },
+      "SUPPORT_CHANNEL": {
+        "description": "",
+        "value": "https://t.me/VVINF",
+        "required": false
+      },
+      "BOT_TOKEN": {
+        "description": "احصل على توكن البوت من botfather",
+        "value": "",
+        "required": true
+      },
+      "MONGO_DB_URI": {
+        "description": "احصل عليها من الموقع https://cloud.mongodb.com .",
+        "value": "",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "اسم بوت الميوزك",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "ايدي مالك البوت",
+        "value": "",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "جلسة البايروجرام",
+        "value": "",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "احصل عليها من هنا https://dashboard.heroku.com/account",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "اسم اكونت الهيروكو",
+        "value": "",
+        "required": false
+      },
+      "LOG_GROUP_ID": {
+        "description": "ايدي جروب البوت . يجب عليك اضافة البوت في المجموعه ورفعه مشرف بكامل الصلاحيات .",
+        "value": "",
+        "required": true
+      },
+      "UPSTREAM_REPO": {
+        "description": "اتركها كما هي",
+        "value": "https://github.com/GJQKP/STAR_MUSIC",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "اتركها كما هي",
+        "value": "master",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "eco"
+          }
+      }
+  }
